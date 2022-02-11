@@ -26,22 +26,23 @@ class MoneticoServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/monetico.php' => config_path('monetico.php'),
+                'config'
             ]);
 
             // Publishing the views.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/monetico'),
-            ], 'views');*/
+            ], 'views');
 
             // Publishing assets.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/monetico'),
-            ], 'assets');*/
+            ], 'assets');
 
             // Publishing the translation files.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/monetico'),
-            ], 'lang');*/
+            ], 'lang');
 
             // Registering package commands.
              $this->commands([
