@@ -41,7 +41,7 @@ class MoneticoServiceProvider extends ServiceProvider
 
             // Registering package commands.
              $this->commands([
-                 Pmilinvest\Monetico\Console\InstallMoneticoPackage::class,
+                 Console\InstallMoneticoPackage::class,
              ]);
         }
     }
