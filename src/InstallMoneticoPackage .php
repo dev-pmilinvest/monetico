@@ -1,6 +1,6 @@
 <?php
 
-namespace Pmilinvest\Monetico\Console;
+namespace Pmilinvest\Monetico;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
