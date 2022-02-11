@@ -1,0 +1,54 @@
+{
+    "name": "pmilinvest/monetico",
+    "description": "MONETICO LARAVEL SDK ",
+    "keywords": [
+        "pmilinvest",
+        "monetico"
+    ],
+    "homepage": "https://github.com/pmilinvest/monetico",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "PMIL Invest",
+            "email": "dev3.info@pmilinvest.fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pmilinvest\\Monetico\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pmilinvest\\Monetico\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pmilinvest\\Monetico\\MoneticoServiceProvider"
+            ],
+            "aliases": {
+                "Monetico": "Pmilinvest\\Monetico\\MoneticoFacade"
+            }
+        }
+    }
+}
