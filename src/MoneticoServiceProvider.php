@@ -41,9 +41,9 @@ class MoneticoServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-             $this->commands([
-                 InstallMoneticoPackage::class,
-             ]);
+//             $this->commands([
+//                 InstallMoneticoPackage::class,
+//             ]);
         }
     }
 
