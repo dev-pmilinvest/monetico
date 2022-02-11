@@ -12,10 +12,10 @@ class Monetico
     const SERVICE_VERSION = config('service_version');
 
     /** @var string */
-    const MAIN_REQUEST_URL =  config('service_version');
+    const MAIN_REQUEST_URL =  config('main_request_url');
 
     /** @var string */
-    const MISC_REQUEST_URL =  config('service_version');
+    const MISC_REQUEST_URL =  config('misc_request_url');
 
     /** @var string|null */
     private $eptCode =  config('service_version');
