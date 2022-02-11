@@ -9,13 +9,13 @@ use Pmilinvest\Monetico\Responses\AbstractResponse;
 class Monetico
 {
     /** @var string */
-    const SERVICE_VERSION = config('service_version');
+    private $service_version = '3.0';
 
     /** @var string */
-    const MAIN_REQUEST_URL =  config('main_request_url');
+    const MAIN_REQUEST_URL =   'https://p.monetico-services.com';
 
     /** @var string */
-    const MISC_REQUEST_URL =  config('misc_request_url');
+    const MISC_REQUEST_URL = 'https://payment-api.e-i.com';
 
     /** @var string|null */
     private $eptCode =  config('service_version');
