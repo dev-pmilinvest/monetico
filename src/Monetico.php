@@ -9,48 +9,23 @@ use Pmilinvest\Monetico\Responses\AbstractResponse;
 class Monetico
 {
     /** @var string */
-    const SERVICE_VERSION = '3.0';
+    const SERVICE_VERSION = config('service_version');
 
     /** @var string */
-    const MAIN_REQUEST_URL = 'https://p.monetico-services.com';
+    const MAIN_REQUEST_URL =  config('service_version');
 
     /** @var string */
-    const MISC_REQUEST_URL = 'https://payment-api.e-i.com';
+    const MISC_REQUEST_URL =  config('service_version');
 
     /** @var string|null */
-    private $eptCode = null;
+    private $eptCode =  config('service_version');
 
     /** @var string|null */
-    private $securityKey = null;
+    private $securityKey =  config('service_version');
 
     /** @var string|null */
-    private $companyCode = null;
+    private $companyCode = config('service_version');
 
-    /**
-     * Construct method
-     *
-     * @param string $eptCode EPT code
-     * @param string $securityKey Security key
-     * @param string $companyCode Company code
-     * @throws Exception
-     */
-    public function __construct(
-        string $eptCode,
-        string $securityKey,
-        string $companyCode
-    ) {
-        if (strlen($eptCode) !== 7) {
-            throw Exception::invalidEptCode($eptCode);
-        }
-
-        if (strlen($securityKey) !== 40) {
-            throw Exception::invalidSecurityKey();
-        }
-
-        $this->eptCode = $eptCode;
-        $this->securityKey = self::getUsableKey($securityKey);
-        $this->companyCode = $companyCode;
-    }
 
     /**
      * Transform security key for seal
