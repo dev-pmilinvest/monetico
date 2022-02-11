@@ -18,15 +18,20 @@ class Monetico
     const MISC_REQUEST_URL = 'https://payment-api.e-i.com';
 
     /** @var string|null */
-    private $eptCode =  config('service_version');
+    private $eptCode =  null;
 
     /** @var string|null */
-    private $securityKey =  config('service_version');
+    private $securityKey =  null;
 
     /** @var string|null */
-    private $companyCode = config('service_version');
+    private $companyCode = null;
 
 
+    public function __construct(){
+        $this->eptCode =  config('service_version');
+        $this->securityKey =  config('service_version');
+        $this->companyCode = config('service_version');
+    }
     /**
      * Transform security key for seal
      *
