@@ -26,7 +26,7 @@ class MoneticoServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/monetico.php' => config_path('monetico.php'),
-            ], 'config');
+            ]);
 
             // Publishing the views.
             /*$this->publishes([
