@@ -2,6 +2,7 @@
 
 namespace Pmilinvest\Monetico;
 
+use Pmilinvest\Monetico\Console\InstallMoneticoPackage;
 use Illuminate\Support\ServiceProvider;
 
 class MoneticoServiceProvider extends ServiceProvider
@@ -41,7 +42,7 @@ class MoneticoServiceProvider extends ServiceProvider
 
             // Registering package commands.
              $this->commands([
-                 Console\InstallMoneticoPackage::class,
+                 InstallMoneticoPackage::class,
              ]);
         }
     }
